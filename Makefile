@@ -23,9 +23,6 @@ options:
 .c.o:
 	$(CC) $(SURFCFLAGS) $(CFLAGS) -c $<
 
-config.h:
-	cp config.def.h $@
-
 $(OBJ): config.h common.h config.mk
 $(COBJ): config.h common.h config.mk
 $(WEBEXTOBJ): config.h common.h config.mk
@@ -43,6 +40,8 @@ surf: $(OBJ) $(COBJ)
 clean:
 	rm -f surf $(OBJ) $(COBJ)
 	rm -f libsurf-webext.so $(WEBEXTOBJ)
+	rm -f *.rej
+	rm -f *.orig
 
 distclean: clean
 	rm -f config.h surf-$(VERSION).tar.gz

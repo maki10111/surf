@@ -1,2 +1,1 @@
-# surf
-My build of surf
+#A fork of suckless surf browser
