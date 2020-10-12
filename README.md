@@ -1,1 +1,1 @@
-#A fork of suckless surf browser
+# A fork of suckless surf browser
